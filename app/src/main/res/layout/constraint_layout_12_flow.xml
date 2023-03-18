@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DAF3FE"
+    tools:context=".MainActivity"
+    tools:ignore="HardcodedText">
+
+    <TextView
+        android:id="@+id/A"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="#Fc0"
+        android:gravity="center"
+        android:text="A"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/B"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="#FF0"
+        android:gravity="center"
+        android:text="B"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/C"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="#CF0"
+        android:gravity="center"
+        android:text="C"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/D"
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:background="#F99"
+        android:gravity="center"
+        android:text="D"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/E"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="#FE6"
+        android:gravity="center"
+        android:text="E"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/G"
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:background="#CF10"
+        android:gravity="center"
+        android:text="G"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/H"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="#F0F"
+        android:gravity="center"
+        android:text="H"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+    <!--
+        flow_horizontalGap    水平间隙
+        flow_verticalGap     垂直间隙
+        app:flow_horizontalStyle="packed｜spread｜spread_inside"  所有水平链的配置
+
+        app:flow_verticalStyle="packed｜spread｜spread_inside"    所有垂直链的配置
+
+        app:flow_firstHorizontalStyle="packed｜spread｜spread_inside" 第一条水平链的配置，其他条不生效
+        app:flow_firstVerticalStyle="packed｜spread｜spread_inside"   第一条垂直链的配置，其他条不生效
+        app:flow_lastHorizontalStyle="packed｜spread｜spread_inside"  最后一条水平链的配置，其他条不生效
+        app:flow_lastVerticalStyle="packed｜spread｜spread_inside"    最后一条垂直链的配置，其他条不生效
+
+        //顶部对齐 top bottom  center baseline
+         app:flow_verticalAlign="top"
+
+         //当 flow_wrapMode aligned 或 chian 时
+         控制每行显示的个数
+         flow_maxElementsWrap
+    -->
+    <androidx.constraintlayout.helper.widget.Flow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="A,B,C,D,E,G,H"
+        app:flow_horizontalGap="10dp"
+        app:flow_verticalGap="10dp"
+        app:flow_wrapMode="aligned"
+        app:flow_maxElementsWrap="5"
+        app:flow_horizontalStyle="packed"
+        app:flow_verticalAlign="baseline"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

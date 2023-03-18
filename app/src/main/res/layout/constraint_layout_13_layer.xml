@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DAF3FE"
+    tools:context=".MainActivity"
+    tools:ignore="HardcodedText">
+
+
+    <!--
+    Layer
+    当Layer的代码在所有引用view的上面时，效果是正常的，因为此时所有的view都在Layer的上面
+    当Layer的代码在所有引用view的下面时，效果是盖住，因为此时所有的view都在Layer的下面
+    此时Layer已经把所有的view覆盖住了
+    -->
+    <androidx.constraintlayout.helper.widget.Layer
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FF0"
+        android:padding="10dp"
+        app:constraint_referenced_ids="AndroidImg,NameTv" />
+
+    <ImageView
+        android:id="@+id/AndroidImg"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/NameTv"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:text="Android"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/AndroidImg"
+        app:layout_constraintStart_toStartOf="@id/AndroidImg"
+        app:layout_constraintTop_toBottomOf="@id/AndroidImg" />
+
+    <androidx.constraintlayout.utils.widget.ImageFilterView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:crossfade="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:roundPercent="360" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
