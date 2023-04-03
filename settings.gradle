@@ -1,5 +1,7 @@
 dependencyResolutionManagement {
-    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    // 如果你的Gradle版本为7.0以上，可能会遇到如下问题：Build was configured to prefer settings repositories over project repositories but repository 'Gradle Libs' was added by unknown code
+//    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositoriesMode.set(RepositoriesMode.PREFER_PROJECT)
     repositories {
         google()
         mavenCentral()
